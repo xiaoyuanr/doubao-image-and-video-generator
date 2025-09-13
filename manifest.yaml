@@ -1,12 +1,12 @@
 author: allenwriter
-created_at: '2024-09-20T08:03:44.658609186Z'
+created_at: '2025-09-13T20:11:50.658609186Z'
 description:
-  en_US: Doubao Image/Video API integration for AI image generation by Volcengine.
-  zh_CN: 火山引擎提供的豆包图像 API，用于 AI 图像生成。
+  en_US: Doubao Media Model for AI image/Video generation by Volcengine.
+  zh_CN: 火山引擎提供的视觉模型，用于AI图像/视频生成。
 icon: icon.svg
 label:
-  en_US: Doubao Image and Video Generator
-  zh_CN: 豆包图像视频生成器
+  en_US:  Volcengine Media Model
+  zh_Hans: 火山方舟视觉模型
 meta:
   arch:
   - amd64
@@ -14,9 +14,9 @@ meta:
   runner:
     entrypoint: main
     language: python
-    version: '3.12'
+    version: '3.13'
   version: 0.0.1
-name: doubao_image
+name: doubao_media
 plugins:
   tools:
   - provider/doubao.yaml

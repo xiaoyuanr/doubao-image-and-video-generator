@@ -29,6 +29,4 @@ identity:
   - image
   - videos
 tools:
-- tools/text2image.yaml
-- tools/text2video.yaml
-- tools/image2video.yaml
+- tools/image2image.yaml

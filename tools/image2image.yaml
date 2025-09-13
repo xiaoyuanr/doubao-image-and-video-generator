@@ -1,0 +1,113 @@
+description:
+  human:
+    en_US: Generate images from images with Doubao (豆包) AI.
+    zh_CN: 使用豆包 AI 由图片生成图片。
+  llm: This tool is used to generate images from images and text prompts using Doubao (豆包) AI, powered by Volcengine/ByteDance.
+extra:
+  python:
+    source: tools/image2image.py
+identity:
+  author: xiaoyuanr
+  icon: icon.svg
+  label:
+    en_US: Image to Image
+    zh_CN: 图生图
+  name: image2image
+parameters:
+- name: model
+  type: select
+  label:
+    en_US: model
+    zh_CN: 模型
+  form: form
+  required: true
+  options:
+    - label:
+        en_US: doubao-seedream-4-0-250828
+        zh_CN: doubao-seedream-4-0-250828
+      value: "doubao-seedream-4-0-250828"
+  default: "doubao-seedream-4-0-250828"
+  human_description:
+    en_US: image size.
+    zh_CN: 图片尺寸
+  llm_description: image size.
+- name: images
+  type: files
+  label:
+    en_US: Images
+    zh_CN: 图片文件
+  form: form
+  required: false
+  human_description:
+    en_US: The image file to be used for image generation.
+    zh_CN: 用于生成图片的图片文件。
+  llm_description: Image files that will be transformed into a image.
+- name: prompt
+  type: string
+  label:
+    en_US: Prompt
+    zh_CN: 提示词
+  form: form
+  required: true
+  human_description:
+    en_US: The text prompt used to generate the image. Doubao will generate images based on this prompt and the input images.
+    zh_CN: 用于生成图片的文本提示。豆包将根据此提示和输入图片生成图片。
+  llm_description: This prompt text will be used to guide the image generation from the input image.
+- name: output_image_num
+  type: number
+  label:
+    en_US: numbers of images to generate
+    zh_CN: 生成的图片数量
+  form: form
+  required: true
+  default: 1
+  min: 1
+  max: 15
+  human_description:
+    en_US: numbers of images to generate.
+    zh_CN: 生成的图片数量
+  llm_description: numbers of images to generate.
+- name: image_size
+  type: select
+  label:
+    en_US: image size
+    zh_CN: 图片尺寸
+  form: form
+  required: true
+  options:
+    - label:
+        en_US: "2048x2048(1:1)"
+        zh_CN: "2048x2048(1:1)"
+      value: "2048x2048"
+    - label:
+        en_US: "2304x1728(4:3)"
+        zh_CN: "2304x1728(4:3)"
+      value: "2304x1728"
+    - label:
+        en_US: "1728x2304(3:4)"
+        zh_CN: "1728x2304(3:4)"
+      value: "1728x2304"
+    - label:
+        en_US: "2560x1440(16:9)"
+        zh_CN: "2560x1440(16:9)"
+      value: "2560x1440"
+    - label:
+        en_US: "1440x2560(9:16)"
+        zh_CN: "1440x2560(9:16)"
+      value: "1440x2560"
+    - label:
+        en_US: "2496x1664(3:2)"
+        zh_CN: "2496x1664(3:2)"
+      value: "2496x1664"
+    - label:
+        en_US: "1664x2496(2:3)"
+        zh_CN: "1664x2496(2:3)"
+      value: "1664x2496"
+    - label:
+        en_US: "3024x1296(21:9)"
+        zh_CN: "3024x1296(21:9)"
+      value: "3024x1296"
+  human_description:
+    en_US: image size.
+    zh_CN: 图片尺寸
+  llm_description: image size.
